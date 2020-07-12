@@ -20,12 +20,11 @@
                 <div><span id="hour">00</span><span>Hours</span></div>
                 <div><span id="minutes">00</span><span>Minutes</span></div>
                 <div><span id="seconds">00</span><span>Seconds</span></div>
-
             </div>
         </div>
         <!-- Odnośniki --> 
         <script src="scripts/clock.js"></script>
-        <div id="LOG"><br><br><a href="logowanie.php">LOG IN</a>/<a href="rejestracja.php">SIGN IN</a></div>
+        <div id="LOG"><br><br><a href="log_in.php">LOG IN</a>/<a href="sign_in.php">SIGN IN</a></div>
         <div id="CONTACT"><br><br><a href="contact.php">CONTACT</a></div>
         <div id="INFO"><br><br><a href="info.php">INFO</a></div>
         <div id="HOME"><br><br><a href="index.php">HOME</a></div>
@@ -42,9 +41,7 @@
             <script src="scripts/y_old.js"></script>
                  
         </div>
-    
-
-        <footer>&copy; <span id='footer'>2020</span> GoldeRoXDev</footer>
-        <script src="scripts/date.js"></script>
+    <footer>&copy; <span id='footer'>2020</span> GoldeRoXDev</footer>
+    <script src="scripts/date.js"></script>
 </body>
 </html>

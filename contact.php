@@ -23,22 +23,18 @@
 
             </div>
         </div>
+
         <script src="scripts/clock.js"></script>
-        <div id="LOG"><br><br><a href="logowanie.php">LOG IN</a>/<a href="rejestracja.php">SIGN IN</a></div>
+        <div id="LOG"><br><br><a href="log_in.php">LOG IN</a>/<a href="sign_in.php">SIGN IN</a></div>
         <div id="CONTACT"><br><br><a href="contact.php">CONTACT</a></div>
         <div id="INFO"><br><br><a href="info.php">INFO</a></div>
         <div id="HOME"><br><br><a href="index.php">HOME</a></div>
-
 
         <div id="contact_info">
             <p>
                 You Can find me and my work and projects here.<br> 
                 Send to me an email <span>ONLY</span> for work offers or other tech releted matters.
-
-
             </p>
-
-
         </div>
 
         <!-- Contact links -->
@@ -47,7 +43,6 @@
             <a href="https://twitter.com/GoldeRoX_DEV" target="blank"><img src="images/Twitter.png"></a>
             <a href="https://github.com/GoldeRoX" target="blank"><img src="images/github.png"></a>
             <a href="mailto:GoldeRoXDEV@interia.pl" ><img src="images/Gmail.png"></a>
-            
            <!-- <script>
                 var uzytkownik = 'GoldeRoXDEV';
                 var domena = 'interia.pl';
@@ -58,10 +53,7 @@
                 else document.write(uzytkownik + '\x40' + domena + '<'+'/a>');
             </script>
             -->
-
-
         </div>
-
 
         <footer>&copy; <span id='footer'>2020</span> GoldeRoXDev</footer>
         <script src="scripts/date.js"></script>

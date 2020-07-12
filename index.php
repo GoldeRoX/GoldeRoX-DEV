@@ -29,7 +29,7 @@
         <!-- Odnośniki --> 
     <?php
         
-        echo '<div id="LOG"><br><br><a href="logowanie.php">LOG IN</a>/<a href="rejestracja.php">SIGN IN</a></div>'
+        echo '<div id="LOG"><br><br><a href="log_in.php">LOG IN</a>/<a href="sign_in.php">SIGN IN</a></div>'
     ?>
         <div id="CONTACT"><br><br><a href="contact.php">CONTACT</a></div>
         <div id="INFO"><br><br><a href="info.php">INFO</a></div>
