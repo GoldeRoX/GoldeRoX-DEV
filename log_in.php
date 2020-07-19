@@ -1,8 +1,5 @@
 <?php
-
     session_start();
-
-
 ?>
 
 
@@ -49,9 +46,9 @@
 <div id="login">
     <form action="login.php" method="POST">
 <br>
-<p>E-mail: </p><input type="text" name="email">
+<p>E-mail: </p><input type="email" name="email" required>
         
-        <p>Password: </p><input type="password" name="password">
+        <p>Password: </p><input type="password" name="password" required>
         <br><br>
         <button type="submit">Log in</button>
 
@@ -63,12 +60,25 @@
 
 <?php
 
+
+
+unset($_SESSION['blad_email']);
+unset($_SESSION['blad_repeat']);
+
+
+
 if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
 
 ?>
 </div>
 
 <div id="github_2"><a href="https://github.com/GoldeRoX" target="blank"><img src="images/github.png"></a></div>
+
+<footer>&copy; <span id='footer'>202</span> GoldeRoXDev</footer>
+<?php
+    if(isset($_SESSION['log_in']))    echo '<span id="footer1">'.$_SESSION['log_in'].'</span>';
+?>
+<script src="scripts/date.js"></script>
 
 </body>
 </html>

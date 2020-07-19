@@ -193,3 +193,24 @@ footer {
     position: fixed;
     bottom: 0pt;
 }
+
+#footer1 {
+    color: whitesmoke;
+    font-family: 'Roboto Thin';
+    text-align: right;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    right: 0pt;
+}
+
+#footer1 > a{
+    color: #FA8072;
+    text-decoration: none;
+}
+
+#footer1 > a:hover{
+    color: red;
+    text-decoration: none;
+}

@@ -38,12 +38,15 @@
                 //wyciąga wiersz z tabeli o nazwie "name"
                 $_SESSION['name'] = $wiersz['name'];
                 $_SESSION['surname'] = $wiersz['surname'];
-
+                $_SESSION['email'] = $wiersz['email'];
+//
+                $_SESSION['log_in'] = '<a href="log_out.php">Wyloguj</a> - <l>'.$_SESSION['email'].'</l> ';
+//
                 unset($_SESSION['blad']);
                 $rezultat->free_result();
 
                 
-                echo '<div id="hello"> Hello <b>'.$_SESSION['name'].' '.$_SESSION['surname'].'</b>!</div>';
+                header('Location: index.php');
             }else
             {
 

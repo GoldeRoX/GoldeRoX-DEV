@@ -28,7 +28,7 @@
         $sqladd = "INSERT INTO `uzytkownicy` (`user`, `pass`, `email`, `name`, `surname`, `phone_number`) VALUES
         ('$username', '$pass1', '$email1', '$first_name', '$last_name', $phone_number);";
 
-/////
+
         if($username == NULL && $phone_number == NULL && $first_name == NULL && $last_name == NULL)
         {
             $sqladd = "INSERT INTO `uzytkownicy` (`pass`, `email`) VALUES
@@ -100,7 +100,6 @@
             ('$pass1', '$email1', '$first_name', '$last_name', '$phone_number');";
         }
 
-/////
 
 
         if($email1 == $email2 && $pass1 == $pass2)
@@ -111,7 +110,8 @@
                 $ilu_userow = $rezultat->num_rows;
                 if($ilu_userow>0)
                 {
-                    $_SESSION['blad_email'] = '<span style="color:red">The current email is already in use!</span>';
+                    unset($_SESSION['blad_repeat']);
+                    $_SESSION['blad_email'] = '<span style="color:red">The current email is already in use! </span>';
                     header('Location: sign_in.php');
                 }
                 else
@@ -124,7 +124,8 @@
             }
         }else
         {
-            $_SESSION['blad_repeat'] = '<span style="color:red">check if email or password are the same as the "repeat" versions!</span>';
+            unset($_SESSION['blad_email']);
+            $_SESSION['blad_repeat'] = '<span style="color:red">check if email or password are the same as the "repeat" versions! </span>';
             header('Location: sign_in.php');
         }
         $polaczenie->close();
