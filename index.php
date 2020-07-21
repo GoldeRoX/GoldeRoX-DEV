@@ -54,7 +54,8 @@
             <p>My name is Christopher, I'm a <span id="y_old">20</span> year old computer enthusiast.<br>
             I'm currently studying Computer Science in Wrocław, Poland. <br>
             I have a Github profile, where I show my projects, code lines <br>
-            of my games and other programming related content. </p>
+            of my games and other programming related content.<br><br>
+            <b>If you are interested in my IT services, please contact me directly: </b> <br>GoldeRoXDEV@interia.pl</p>
         </div>
 
         <script src="scripts/y_old.js"></script>
@@ -74,5 +75,6 @@
         if(isset($_SESSION['log_in']))    echo '<span id="footer1">'.$_SESSION['log_in'].'</span>';
     ?>
     <script src="scripts/date.js"></script>
+    
 </body>
 </html>

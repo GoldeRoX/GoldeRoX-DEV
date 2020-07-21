@@ -1,9 +1,6 @@
 <?php
     session_start();
 ?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,68 +14,57 @@
 
 </head>
 <body>
-<div id="LOGO">
-            <br>
-            <h1><i><a href="index.php"><pre>GoldeRoX DEV</pre></a></i></h1>
-        </div>
-
-<div id="HOME"><br><br><a href="index.php">HOME</a></div>
-<div id="INFO"><br><br><a href="info.php">INFO</a></div>
-<div id="CONTACT"><br><br><a href="contact.php">CONTACT</a></div>
-
-
-<div id="clock">
-            <h2>The time is now</h2>
-            <div id="time">
-            <!-- Zegar -->
-                <div><span id="hour">00</span><span>Hours</span></div>
-                <div><span id="minutes">00</span><span>Minutes</span></div>
-                <div><span id="seconds">00</span><span>Seconds</span></div>
-
+    <div id="LOGO">
+                <br>
+                <h1><i><a href="index.php"><pre>GoldeRoX DEV</pre></a></i></h1>
             </div>
-</div>
+
+    <div id="HOME"><br><br><a href="index.php">HOME</a></div>
+    <div id="INFO"><br><br><a href="info.php">INFO</a></div>
+    <div id="CONTACT"><br><br><a href="contact.php">CONTACT</a></div>
+
+
+    <div id="clock">
+        <h2>The time is now</h2>
+        <div id="time">
+        <!-- Zegar -->
+            <div><span id="hour">00</span><span>Hours</span></div>
+            <div><span id="minutes">00</span><span>Minutes</span></div>
+            <div><span id="seconds">00</span><span>Seconds</span></div>
+        </div>
+    </div>
         <script src="scripts/clock.js"></script>
 
+    <div id="github_1"><a href="https://github.com/GoldeRoX" target="blank"><img src="images/github.png"></a></div>
 
+    <div id="login">
+        <form action="login.php" method="POST">
+            <br>
+            <p>E-mail: </p><input type="email" name="email" required>
+            
+            <p>Password: </p><input type="password" name="password" required>
+            <br><br>
+            <button type="submit">Log in</button>
 
-<div id="github_1"><a href="https://github.com/GoldeRoX" target="blank"><img src="images/github.png"></a></div>
+        </form>
 
-<div id="login">
-    <form action="login.php" method="POST">
-<br>
-<p>E-mail: </p><input type="email" name="email" required>
-        
-        <p>Password: </p><input type="password" name="password" required>
-        <br><br>
-        <button type="submit">Log in</button>
+        <?php
 
-    </form>
+            unset($_SESSION['blad_email']);
+            unset($_SESSION['blad_repeat']);
 
+            if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
 
+        ?>
+    </div>
 
+    <div id="github_2"><a href="https://github.com/GoldeRoX" target="blank"><img src="images/github.png"></a></div>
 
-
-<?php
-
-
-
-unset($_SESSION['blad_email']);
-unset($_SESSION['blad_repeat']);
-
-
-
-if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
-
-?>
-</div>
-
-<div id="github_2"><a href="https://github.com/GoldeRoX" target="blank"><img src="images/github.png"></a></div>
-
-<footer>&copy; <span id='footer'>202</span> GoldeRoXDev</footer>
-<?php
-    if(isset($_SESSION['log_in']))    echo '<span id="footer1">'.$_SESSION['log_in'].'</span>';
-?>
-<script src="scripts/date.js"></script>
+    <footer>&copy; <span id='footer'>202</span> GoldeRoXDev</footer>
+    <?php
+        if(isset($_SESSION['log_in']))    echo '<span id="footer1">'.$_SESSION['log_in'].'</span>';
+    ?>
+    <script src="scripts/date.js"></script>
 
 </body>
 </html>

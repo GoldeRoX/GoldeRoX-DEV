@@ -2,7 +2,7 @@
 <html>
     <HEAD>
         <title>test log</title>
-        <link rel="Stylesheet" type="text/css" href="login.css">
+        
     </HEAD>
     <body>
 
@@ -22,9 +22,11 @@
     {
         $haslo = $_POST["password"];
         $email = $_POST["email"];
+
+      
         
 
-        $sql = "SELECT * FROM uzytkownicy WHERE email='$email' AND pass='$haslo'";
+        $sql = "SELECT * FROM uzytkownicy WHERE email='$email'";
 
 
         if($rezultat = @$polaczenie->query($sql))
@@ -32,21 +34,29 @@
             $ilu_userow = $rezultat->num_rows;
             if($ilu_userow>0)
             {
-                
 
                 $wiersz = $rezultat->fetch_assoc();
-                //wyciąga wiersz z tabeli o nazwie "name"
-                $_SESSION['name'] = $wiersz['name'];
-                $_SESSION['surname'] = $wiersz['surname'];
-                $_SESSION['email'] = $wiersz['email'];
-//
-                $_SESSION['log_in'] = '<a href="log_out.php">Wyloguj</a> - <l>'.$_SESSION['email'].'</l> ';
-//
-                unset($_SESSION['blad']);
-                $rezultat->free_result();
 
-                
-                header('Location: index.php');
+                if (password_verify($haslo, $wiersz['pass']))
+                    {
+                        //wyciąga wiersz z tabeli o nazwie "name"
+                        $_SESSION['name'] = $wiersz['name'];
+                        $_SESSION['surname'] = $wiersz['surname'];
+                        $_SESSION['email'] = $wiersz['email'];
+                        $_SESSION['pass'] = $wiersz['pass'];
+        
+                        $_SESSION['log_in'] = '<a href="log_out.php">Wyloguj</a> - <l>'.$_SESSION['email'].'</l> ';
+        
+                        unset($_SESSION['blad']);
+                        $rezultat->free_result();
+
+                        
+                        header('Location: index.php');
+                    }else
+                {
+                    $_SESSION['blad'] = '<span style="color:red">Invalid login or password!</span>';
+                    header('Location: log_in.php');
+                }
             }else
             {
 
@@ -55,7 +65,6 @@
 
             }
         }
-
 
         $polaczenie->close();
     }

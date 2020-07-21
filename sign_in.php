@@ -56,8 +56,7 @@
             <p>Last name</p><input type="text" name="last_name">
         </div>
             
-        <br>
-            
+        <br>    
 
             <br><br>
             <button type="submit">Sign in</button>
