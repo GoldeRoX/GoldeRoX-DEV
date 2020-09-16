@@ -32,6 +32,7 @@
         $sqladd = "INSERT INTO `uzytkownicy` (`user`, `pass`, `email`, `name`, `surname`, `phone_number`) VALUES
         ('$username', '$pass_hash', '$email1', '$first_name', '$last_name', $phone_number);";
 
+        //konfiguracje zapytania SQL do bazy danych
 
         if($username == NULL && $phone_number == NULL && $first_name == NULL && $last_name == NULL)
         {

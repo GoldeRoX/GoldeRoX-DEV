@@ -10,7 +10,7 @@
     <meta name="author" content="GoldeRoX Dev">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoldeRoX DEV-log in</title>
-    <link rel="Stylesheet" type="text/css" href="log_in.css">
+    <link rel="Stylesheet" type="text/css" href="log_in_02.css">
 
 </head>
 <body>
@@ -24,31 +24,32 @@
     <div id="CONTACT"><br><br><a href="contact.php">CONTACT</a></div>
 
 
-    <div id="clock">
-        <h2>The time is now</h2>
-        <div id="time">
-        <!-- Zegar -->
-            <div><span id="hour">00</span><span>Hours</span></div>
-            <div><span id="minutes">00</span><span>Minutes</span></div>
-            <div><span id="seconds">00</span><span>Seconds</span></div>
-        </div>
+    <!-- drugie logo -->
+
+    <div id="LOGO">
+                <br>
+                <h1><i><a href="index.php"><pre>GoldeRoX DEV</pre></a></i></h1>
     </div>
-        <script src="scripts/clock.js"></script>
 
     <div id="github_1"><a href="https://github.com/GoldeRoX" target="blank"><img src="images/github.png"></a></div>
 
     <div id="login">
-        <form action="login.php" method="POST">
-            <br>
-            <p>E-mail: </p><input type="email" name="email" required>
+        <form class="box" action="login.php" method="POST">
+
+            <h1>LOGIN</h1>
+
+            <input type="email" name="email" placeholder="email" required>
             
-            <p>Password: </p><input type="password" name="password" required>
-            <br><br>
-            <button type="submit">Log in</button>
-
-        </form>
-
-        <?php
+            <input type="password" name="password" placeholder="password" required>
+            
+            <input type="submit" value="Login">
+            <!--
+                
+                <button type="submit">Log in</button>
+            
+            -->
+            
+            <?php
 
             unset($_SESSION['blad_email']);
             unset($_SESSION['blad_repeat']);
@@ -56,6 +57,18 @@
             if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
 
         ?>
+
+        </form>
+            
+        <?php
+
+            //unset($_SESSION['blad_email']);
+            //unset($_SESSION['blad_repeat']);
+//
+            //if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
+
+        ?>
+            
     </div>
 
     <div id="github_2"><a href="https://github.com/GoldeRoX" target="blank"><img src="images/github.png"></a></div>

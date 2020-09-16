@@ -38,6 +38,7 @@
         <p>
             You Can find me and my work and projects here.<br> 
             Send to me an email <span>ONLY</span> for work offers or other tech releted matters.
+            <br><br>GoldeRoXDEV@interia.pl
         </p>
     </div>
 

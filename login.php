@@ -20,6 +20,7 @@
     }
     else
     {
+        //informacje wyciągnięte z formularza 
         $haslo = $_POST["password"];
         $email = $_POST["email"];
 
@@ -37,7 +38,7 @@
 
                 $wiersz = $rezultat->fetch_assoc();
 
-                if (password_verify($haslo, $wiersz['pass']))
+                if (password_verify($haslo, $wiersz['pass'])) //sprawdzenie hasła z jego szyfrowacją hash
                     {
                         //wyciąga wiersz z tabeli o nazwie "name"
                         $_SESSION['name'] = $wiersz['name'];
